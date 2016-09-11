@@ -1,0 +1,95 @@
+#lpt-carousel {
+  position: relative;
+  overflow:hidden;
+  min-height:500px;
+}
+
+.lpt-arrow {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  display: flex;
+  z-index: 1000;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  -webkit-transition: opacity 700ms;
+  -moz-transition: opacity 700ms;
+  transition: opacity 700ms;
+}
+
+#lpt-carousel:hover .lpt-arrow {
+  opacity: 0.3;
+  -webkit-transition: opacity 700ms;
+  -moz-transition: opacity 700ms;
+  transition: opacity 700ms;
+}
+
+#lpt-carousel #lpt-right-arrow {
+  right: 5vh;
+  bottom: 5vh;
+}
+
+#lpt-carousel #lpt-left-arrow {
+  left: 5vh;
+  bottom: 5vh;
+}
+
+#lpt-carousel img {
+   height:500px;
+   position: absolute;
+   margin-left:auto;
+}
+
+#lpt-carousel img.lpt-current-image {
+  opacity: 1;
+  -webkit-transition: opacity 700ms;
+  -moz-transition: opacity 700ms;
+  transition: opacity 700ms;
+}
+
+#lpt-carousel img.lpt-hidden-image {
+  opacity: 0;
+  -webkit-transition: opacity 700ms;
+  -moz-transition: opacity 700ms;
+  transition: opacity 700ms;
+}
+
+.lpt-arrow span {
+  position: absolute;
+  height: 10px;
+  width: 20px;
+  background-color: #000;
+}
+
+.lpt-left-upper {
+  transform: rotate(-45deg);
+  top: 11px;
+  left: 5px;
+}
+
+.lpt-left-lower {
+  bottom: 11px;
+  left: 5px;
+  transform: rotate(45deg);
+}
+
+.lpt-right-upper {
+  transform: rotate(45deg);
+  top: 11px;
+  right: 5px;
+}
+
+.lpt-right-lower {
+  bottom: 11px;
+  right: 5px;
+  transform: rotate(-45deg);
+}
+@media only screen and (min-width 769px){
+  #min-height: 500px;
+}
+@media only screen and (max-width 768px){
+  #lpt-carousel {
+    min-height:300px !important;
+  }
+}
